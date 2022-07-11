@@ -1,0 +1,215 @@
+*{
+  box-sizing:border-box;
+  padding: 0;
+  margin: 0;
+}
+#bigContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+
+  #grid_div {
+  display: grid;
+  font-size: large;
+
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "gallery gallery gallery gallery"
+    "footer footer footer footer";
+ } 
+
+
+
+ #header {
+  display: flex;
+  align-items: center;
+  border: 1px solid black; 
+ justify-content: space-between;
+  height: 10vh;
+ background-color:black;
+  color: white;
+  position: fixed;
+  width: 100%;
+
+
+} 
+
+.logo {
+  cursor: pointer;
+}
+a:link {
+  color: white;
+   text-decoration: none;
+}
+
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;  
+}
+.nav_links li :hover {
+  display: block;
+  color: #5da900;
+  background-color: rgb(9, 9, 9);
+}
+.nav_links li :visited {
+  
+  color: #fcfdfa;
+  background-color: rgb(9, 9, 9);
+}
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+
+#main {
+  display: flex;
+  height: 100vh;
+  padding-top:20px;
+  width: 100vw;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: black;
+  background-clip: url(/imag/);
+}
+.section-1{
+width: 50vw;
+height: 50vh;
+  background-image: url(imag/IPHON.avif);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.logo {
+  cursor: pointer;
+  height: 50px;
+  width: 80px;
+}
+#section-1-header{
+  font-family: sans-serif;
+  font-size: 105px;
+  font-weight: lighter;
+  color: rgb(126, 68, 20);
+  text-align: center;
+  margin-top: 30px;
+  max-width: 628px;
+
+}
+.myh{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: x-large;
+  font-weight: lighter;
+  color: rgb(224, 223, 223);
+  text-align: center;
+  font-size: 57px;
+}
+.myh1{
+text-align: center;
+font-family: sans-serif;
+font-size: x-large;
+font-weight: lighter;
+color: rgb(224, 223, 223);
+text-align: center;
+font-size: 70px;
+}
+.section-2{
+width: 50vw;
+height: 50vh;
+  background-image: url(imag/iphonInH.avif);
+ margin-top:  0px;
+  background-size: cover; 
+}
+#videoDiv{
+display: block;
+margin-left: 290px;
+background-clip: url(/imag/Iphone\ 13Pro\ Cinematic\ Video.mp4);
+}
+
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: space-around;
+  height: 15vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(53 56 58 / 99%);} 
+@media screen and (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .nav_links{
+    display: none;
+    width: 100px;
+  }
+  .nav_links.active {
+    display: inherit;
+    width: 100vw;    
+  }
+  .nav_links.active>ul {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5rem; 
+    background-color:black;
+  }
+  button {
+    display: none;
+  }
+  #main{
+    width: 100%;
+    display: flex;
+   flex-direction: row;
+   margin-top: 30px;
+  }
+ .haeder{
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+ 
+ .section-1{
+  width: 100vw;
+  height: 75vh;
+ }
+ .section-2{
+ display: none; 
+ }
+ #mainVideo{
+  display: none;
+ }
+}
+
+

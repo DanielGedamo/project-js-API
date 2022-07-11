@@ -1,0 +1,200 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+    #grid_div {
+    display: grid;
+    font-size: large;
+  
+    grid-template-areas:
+      "header header header header"
+      "main main main main"
+      "main main main main"
+      "gallery gallery gallery gallery"
+      "footer footer footer footer";
+  }
+  
+  
+  
+  #header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-between;
+    height: 10vh;
+   background-color:black;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+  .logo {
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
+  }
+  a:link {
+    color: white;
+     text-decoration: none;
+  }
+  
+  
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;  
+  }
+  .nav_links li :visited {
+  
+    color: #fcfdfa;
+    background-color: rgb(9, 9, 9);
+  }
+  .nav_links li :hover {
+    display: block;
+    color: #5da900;
+    background-color: rgb(9, 9, 9);
+  }
+  button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  
+  #AboutMain {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),url( /imag/man&phon.jfif);
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: rgba(123, 230, 73, 0.342);
+    
+  }
+  
+  .title {
+    color: rgb(40, 39, 39);
+    font-size: 18px;
+  }  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  #DivOfText{
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    
+  } 
+  .card-2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: rgba(123, 230, 73, 0.342);
+    
+
+  }
+  
+  .title-2 {
+    color: grey;
+    font-size: 18px;
+  }  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  #footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-around;
+    height: 15vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(53 56 58 / 99%);} 
+  @media screen and (max-width: 600px) {
+    .toggle-button {
+      display: flex;
+    }
+    .nav_links{
+      display: none;
+      width: 100px;
+    }
+    .nav_links.active {
+      display: inherit;
+      width: 100vw;    
+    }
+    .nav_links.active>ul {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 5rem; 
+      background-color:black;
+    }
+    button {
+      display: none;
+    }
+    #AboutMain{
+      height: 100%;
+      display: block;
+      
+      background-color: rgb(127, 122, 152);
+    }
+   .haeder{
+    display: flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .card{
+    margin-top: 0px;
+    width: 202px;
+    margin-left: 0px;
+
+
+  }
+   .card-2{
+   display: none;
+   }
+   .footer{
+    width: 102%;
+    margin-bottom: 200px;
+    position:absolute
+   }
+   #DivOfText{
+    margin-left: 20px;
+    color: aliceblue;
+    font-size: 11px;
+    
+  } 
+   
+  }
